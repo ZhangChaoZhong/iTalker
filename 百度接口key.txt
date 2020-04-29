@@ -1,0 +1,50 @@
+人脸识别接口
+AppID：18135453
+API Key：CcEE3w2GAiGquFU2NdP31ase
+Secret Key：wrOu6sa2Pp10ch4K3VRbZV0WZt5mqsee
+
+文字识别接口
+AppID:18137670
+API Key:klbIuMLkSkG9jilxV7mxu2lZ
+Secret Key:eyPQpFG3drzOTIgxazf3IPzR8y7LVXQg
+
+RX TX SOP2  下载模式
+CH34_VCC D5-7
+
+TD1 TD0 SOP0 调式模式
+
+RXD TXD串口
+
+netstat -ano|findstr 80
+
+
+
+一、java -jar TranceImg.jar
+
+这是最基本的jar包执行方式，但是当我们用ctrl+c中断或者关闭窗口时，程序也会中断执行。
+
+二、java -jar TranceImg.jar &
+
+&代表在后台运行，使用ctrl+c不会中断程序的运行，但是关闭窗口会中断程序的运行。
+
+三、nohup java -jar TranceImg.jar &
+
+使用这种方式运行的程序日志会输出到当前目录下的nohup.out文件，使用ctrl+c中断或者关闭窗口都不会中断程序的执行。
+
+三、nohup java -jar TranceImg.jar >temp.out &
+
+>temp.out的意思是将日志输出重定向到temp.out文件，使用ctrl+c中断或者关闭窗口都不会中断程序的执行。
+
+
+ps aux|grep TranceImg.jar
+
+root     13213  0.2  1.8 2473372 35656 pts/0   Sl   13:20   0:00 java -jar TranceImg.jar
+root     13646  0.0  0.0 112664   988 pts/0    R+   13:23   0:00 grep --color=auto TranceImg.jar
+
+
+kill -9  13213  
+
+etstat -nupl (UDP类型的端口) 
+netstat -ntpl (TCP类型的端口) 
+netstat -anp 显示系统端口使用情况 
+
